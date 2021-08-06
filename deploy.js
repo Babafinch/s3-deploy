@@ -28,6 +28,7 @@ let deploy = function (params) {
                         ${noCacheArg} \
                         ${privateArg} `;
 
+      console.log(`Executing: ${command}`);
       const cwd = path.resolve(folder);
       exec.exec(command, [], { cwd }).then(resolve).catch(reject);
     } catch (e) {
